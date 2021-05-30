@@ -5,7 +5,7 @@ This repository is a collection of published gene expression datasets, generated
 ## Datasets
 The following table lists the currently available datasets in the repository sorted somehow according to the complexity (number of conditions) of the dataset:
 
-| Dataset | Description | PMID | GEO |
+| Dataset | Description | NCBI PMID | NCBI GEO |
 | --- | --- | --- | --- |
 | [IRF6](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/irf6) | | [17041601](https://pubmed.ncbi.nlm.nih.gov/17041601/) | [GSE5800](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE5800) |
 | [HDAC1](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/hdac1) | | [16940178](https://pubmed.ncbi.nlm.nih.gov/16940178/) | [GSE5583](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE5583) |
