@@ -1,5 +1,7 @@
 # Gene Expression Datasets
 
+![DNA](images/colorful_dna.png)
+
 This repository is a collection of published gene expression datasets, generated using, mainly and classically, [microarray](https://en.wikipedia.org/wiki/DNA_microarray) and [RNA-Seq](https://en.wikipedia.org/wiki/RNA-Seq) studies. These datasets are used for group projects on gene expression data analysis at [AUC](https://www.aucegypt.edu/home).
 
 ## Datasets
