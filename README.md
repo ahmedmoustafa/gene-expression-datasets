@@ -7,11 +7,11 @@ The following table list the different datasets included in this repository sort
 
 | Dataset | Description | PMID | GSE |
 | --- | --- | --- | --- |
-| [IRF6](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/irf6) | | | |
-| [HDAC1](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/hdac1) | | | |
-| [Huntington's](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/huntingtons) | | | |
-| [Leukemia](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/leukemia) | | | |
-| [African Apes](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/african_apes) | | | | 
-| [Primates Diet](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/primates_diet) | | | |
-| [Medulloblastoma](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/medulloblastoma) | | | |
-| [COVID-19](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/covid19) | | | |
+| [IRF6](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/irf6) | | [17041601](https://pubmed.ncbi.nlm.nih.gov/17041601/) | |
+| [HDAC1](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/hdac1) | | [16940178](https://pubmed.ncbi.nlm.nih.gov/16940178/) | |
+| [Huntington's](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/huntingtons) | | [16043692](https://pubmed.ncbi.nlm.nih.gov/16043692/) | |
+| [Leukemia](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/leukemia) | | [10521349](https://pubmed.ncbi.nlm.nih.gov/10521349/) | |
+| [African Apes](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/african_apes) | | [12840040](https://pubmed.ncbi.nlm.nih.gov/12840040/) | | 
+| [Primates Diet](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/primates_diet) | | [18231591](https://pubmed.ncbi.nlm.nih.gov/18231591/) | |
+| [Medulloblastoma](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/medulloblastoma) | | [22722829](https://pubmed.ncbi.nlm.nih.gov/22722829/) | |
+| [COVID-19](https://github.com/ahmedmoustafa/gene-expression-datasets/tree/main/datasets/covid19) | | [33096026](https://pubmed.ncbi.nlm.nih.gov/33096026/) | |
