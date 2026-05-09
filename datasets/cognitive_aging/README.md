@@ -11,7 +11,7 @@ Hippocampal expression profiles were collected from rats at five ages spanning t
 | | |
 |---|---|
 | Organism | Rat |
-| Tissue | Hippocampus |
+| Tissue | Hippocampus, CA1 region (microdissected) |
 | Conditions | 5 age points: M3 (9), M6 (9), M9 (9), M12 (9), M23 (13) |
 | Samples | 49 |
 | Platform | Affymetrix Rat Expression 230A Array ([GPL341](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL341)) |
@@ -23,10 +23,12 @@ Hippocampal expression profiles were collected from rats at five ages spanning t
 
 ## Notes
 
-Time course in age, not a two-group study. Sensible analyses are 5-condition one-way ANOVA or a continuous-age linear model (treating month-of-age as a covariate). The lecture's plain t-test does not directly apply.
+Time course in age, not a two-group study. Sensible analyses are 5-condition one-way ANOVA or a continuous-age linear model (treating month-of-age as a covariate). A plain two-group t-test does not directly apply.
 
 
-## Loading
+## Load
+
+### Python
 
 ```python
 import pandas as pd
@@ -35,4 +37,13 @@ URL = ("https://media.githubusercontent.com/media/ahmedmoustafa/"
        "gene-expression-datasets/main/datasets/cognitive_aging/cognitive_aging.tsv")
 data = pd.read_table(URL, index_col=0)
 data.shape
+```
+
+### R
+
+```r
+url <- paste0("https://media.githubusercontent.com/media/ahmedmoustafa/",
+              "gene-expression-datasets/main/datasets/cognitive_aging/cognitive_aging.tsv")
+data <- read.delim(url, row.names = 1, check.names = FALSE)
+dim(data)
 ```
