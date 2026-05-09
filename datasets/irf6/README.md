@@ -26,7 +26,9 @@ Variants in the Interferon Regulatory Factor 6 (*IRF6*) gene cause Van der Woude
 Used as the in-class case study in BIOT 5206 Lecture 8. The lecture pipeline log-transforms this dataset as a teaching moment.
 
 
-## Loading
+## Load
+
+### Python
 
 ```python
 import pandas as pd
@@ -36,3 +38,31 @@ URL = ("https://media.githubusercontent.com/media/ahmedmoustafa/"
 data = pd.read_table(URL, index_col=0)
 data.shape
 ```
+
+### R
+
+```r
+url <- paste0("https://media.githubusercontent.com/media/ahmedmoustafa/",
+              "gene-expression-datasets/main/datasets/irf6/irf6.tsv")
+data <- read.delim(url, row.names = 1, check.names = FALSE)
+dim(data)
+```
+
+## First exploration
+
+Beyond the load, get an immediate sense of the data:
+
+### Python
+
+```python
+data.describe().T[["min", "50%", "max"]].head(8)
+```
+
+### R
+
+```r
+sapply(data[, 1:min(8, ncol(data))],
+       function(x) c(min = min(x), median = median(x), max = max(x)))
+```
+
+A `min` near zero with `max` in the thousands indicates **raw intensities** (apply `log2` before any test). A `min` near 0 to 5 with `max` around 10 to 18 indicates **log2-transformed** data, ready for analysis. A negative `min` indicates a **per-gene-centered or log-ratio** matrix (deviations rather than absolute expression).
