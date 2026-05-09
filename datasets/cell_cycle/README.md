@@ -1,4 +1,4 @@
-# Yeast cell cycle synchronization (Spellman 1998)
+# Yeast cell cycle time course
 
 **Source:** Spellman PT et al., 1998. *Comprehensive identification of cell cycle-regulated genes of the yeast Saccharomyces cerevisiae by microarray hybridization*. Mol Biol Cell. PMID: [9843569](https://pubmed.ncbi.nlm.nih.gov/9843569/)
 
@@ -23,10 +23,12 @@ The classic cell cycle dataset. Yeast cultures were synchronized via three diffe
 
 ## Notes
 
-**Time course, no replicates.** The lecture's per-gene t-test does *not* apply. Standard methods for this dataset are time-series analyses: Fourier (`JTK_CYCLE`), autocorrelation, sinusoidal regression. A group can use this dataset only if they pivot the methodology to time series; a plain t-test framing will produce a wrong-shaped analysis.
+**Time course, no replicates.** A per-gene t-test does *not* apply. Standard methods for this dataset are time-series analyses: Fourier (`JTK_CYCLE`), autocorrelation, sinusoidal regression. A pivot to time-series methodology is required; a plain t-test framing will produce a wrong-shaped analysis.
 
 
-## Loading
+## Load
+
+### Python
 
 ```python
 import pandas as pd
@@ -35,4 +37,13 @@ URL = ("https://media.githubusercontent.com/media/ahmedmoustafa/"
        "gene-expression-datasets/main/datasets/cell_cycle/cell_cycle.tsv")
 data = pd.read_table(URL, index_col=0)
 data.shape
+```
+
+### R
+
+```r
+url <- paste0("https://media.githubusercontent.com/media/ahmedmoustafa/",
+              "gene-expression-datasets/main/datasets/cell_cycle/cell_cycle.tsv")
+data <- read.delim(url, row.names = 1, check.names = FALSE)
+dim(data)
 ```

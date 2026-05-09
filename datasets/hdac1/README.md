@@ -23,10 +23,12 @@ Histone deacetylase 1 (HDAC1) removes acetyl groups from histones and is general
 
 ## Notes
 
-Note the older U74A v2 array has roughly a quarter of the probes of the IRF6 chip.
+The older U74A v2 array carries roughly a quarter of the probes of the IRF6 chip.
 
 
-## Loading
+## Load
+
+### Python
 
 ```python
 import pandas as pd
@@ -35,4 +37,13 @@ URL = ("https://media.githubusercontent.com/media/ahmedmoustafa/"
        "gene-expression-datasets/main/datasets/hdac1/hdac1.tsv")
 data = pd.read_table(URL, index_col=0)
 data.shape
+```
+
+### R
+
+```r
+url <- paste0("https://media.githubusercontent.com/media/ahmedmoustafa/",
+              "gene-expression-datasets/main/datasets/hdac1/hdac1.tsv")
+data <- read.delim(url, row.names = 1, check.names = FALSE)
+dim(data)
 ```

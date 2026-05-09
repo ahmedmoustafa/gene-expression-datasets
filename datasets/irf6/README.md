@@ -26,7 +26,9 @@ Variants in the Interferon Regulatory Factor 6 (*IRF6*) gene cause Van der Woude
 Used as the in-class case study in BIOT 5206 Lecture 8. The lecture pipeline log-transforms this dataset as a teaching moment.
 
 
-## Loading
+## Load
+
+### Python
 
 ```python
 import pandas as pd
@@ -35,4 +37,13 @@ URL = ("https://media.githubusercontent.com/media/ahmedmoustafa/"
        "gene-expression-datasets/main/datasets/irf6/irf6.tsv")
 data = pd.read_table(URL, index_col=0)
 data.shape
+```
+
+### R
+
+```r
+url <- paste0("https://media.githubusercontent.com/media/ahmedmoustafa/",
+              "gene-expression-datasets/main/datasets/irf6/irf6.tsv")
+data <- read.delim(url, row.names = 1, check.names = FALSE)
+dim(data)
 ```

@@ -11,7 +11,7 @@ Huntington's disease (HD) is a fatal neurodegenerative disorder caused by an exp
 | | |
 |---|---|
 | Organism | Human |
-| Tissue | Whole blood |
+| Tissue | Peripheral blood lymphocytes |
 | Conditions | Ctrl (10), HD (12) |
 | Samples | 22 |
 | Platform | Affymetrix Human Genome U133 Plus 2.0 Array ([GPL570](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL570)) |
@@ -23,10 +23,12 @@ Huntington's disease (HD) is a fatal neurodegenerative disorder caused by an exp
 
 ## Notes
 
-Two-condition comparison; ports the lecture pipeline cleanly.
+Two-condition comparison; ports a standard differential-expression pipeline cleanly.
 
 
-## Loading
+## Load
+
+### Python
 
 ```python
 import pandas as pd
@@ -35,4 +37,13 @@ URL = ("https://media.githubusercontent.com/media/ahmedmoustafa/"
        "gene-expression-datasets/main/datasets/huntingtons/huntingtons.tsv")
 data = pd.read_table(URL, index_col=0)
 data.shape
+```
+
+### R
+
+```r
+url <- paste0("https://media.githubusercontent.com/media/ahmedmoustafa/",
+              "gene-expression-datasets/main/datasets/huntingtons/huntingtons.tsv")
+data <- read.delim(url, row.names = 1, check.names = FALSE)
+dim(data)
 ```

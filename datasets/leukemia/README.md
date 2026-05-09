@@ -1,4 +1,4 @@
-# AML vs ALL classification (Golub 1999)
+# AML vs ALL classification
 
 **Source:** Golub TR et al., 1999. *Molecular classification of cancer: class discovery and class prediction by gene expression monitoring*. Science. PMID: [10521349](https://pubmed.ncbi.nlm.nih.gov/10521349/)
 
@@ -23,10 +23,12 @@ The classic study that introduced gene-expression profiling as a tool for cancer
 
 ## Notes
 
-The matrix is normalized as a deviation from each gene's overall mean, so values are signed. Skip the `np.log2(data)` step from the IRF6 pipeline; the data is already in log space.
+The matrix is normalized as a deviation from each gene's overall mean, so values are signed. Skip any `log2()` step in the pipeline; the data is already in log space.
 
 
-## Loading
+## Load
+
+### Python
 
 ```python
 import pandas as pd
@@ -35,4 +37,13 @@ URL = ("https://media.githubusercontent.com/media/ahmedmoustafa/"
        "gene-expression-datasets/main/datasets/leukemia/leukemia.tsv")
 data = pd.read_table(URL, index_col=0)
 data.shape
+```
+
+### R
+
+```r
+url <- paste0("https://media.githubusercontent.com/media/ahmedmoustafa/",
+              "gene-expression-datasets/main/datasets/leukemia/leukemia.tsv")
+data <- read.delim(url, row.names = 1, check.names = FALSE)
+dim(data)
 ```

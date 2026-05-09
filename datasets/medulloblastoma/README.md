@@ -26,7 +26,9 @@ Medulloblastoma is a malignant pediatric brain tumor with four molecular subgrou
 Sample condition labels are *not* in the column names; load `medulloblastoma.samples.tsv` for the sample-to-subgroup mapping. Multi-condition design requires either pairwise t-tests with shared FDR or one-way ANOVA.
 
 
-## Loading
+## Load
+
+### Python
 
 ```python
 import pandas as pd
@@ -35,4 +37,13 @@ URL = ("https://media.githubusercontent.com/media/ahmedmoustafa/"
        "gene-expression-datasets/main/datasets/medulloblastoma/medulloblastoma.tsv")
 data = pd.read_table(URL, index_col=0)
 data.shape
+```
+
+### R
+
+```r
+url <- paste0("https://media.githubusercontent.com/media/ahmedmoustafa/",
+              "gene-expression-datasets/main/datasets/medulloblastoma/medulloblastoma.tsv")
+data <- read.delim(url, row.names = 1, check.names = FALSE)
+dim(data)
 ```

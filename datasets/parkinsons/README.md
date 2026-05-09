@@ -1,4 +1,4 @@
-# Drug-naive sporadic Parkinson's disease blood transcriptomics
+# Sporadic Parkinson's disease blood transcriptomics
 
 **Source:** Calligaris R et al., 2015. *Blood transcriptomics of drug-naive sporadic Parkinson's disease patients*. BMC Genomics. PMID: [26510930](https://pubmed.ncbi.nlm.nih.gov/26510930/) | GEO: [GSE72267](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72267)
 
@@ -26,7 +26,9 @@ Parkinson's disease (PD) is a progressive neurodegenerative disorder defined cli
 The original paper adjusted for sex, age, and treatment status. Without covariate adjustment, a per-gene t-test will produce a DEG list contaminated by demographic effects rather than disease biology.
 
 
-## Loading
+## Load
+
+### Python
 
 ```python
 import pandas as pd
@@ -35,4 +37,13 @@ URL = ("https://media.githubusercontent.com/media/ahmedmoustafa/"
        "gene-expression-datasets/main/datasets/parkinsons/parkinsons.tsv")
 data = pd.read_table(URL, index_col=0)
 data.shape
+```
+
+### R
+
+```r
+url <- paste0("https://media.githubusercontent.com/media/ahmedmoustafa/",
+              "gene-expression-datasets/main/datasets/parkinsons/parkinsons.tsv")
+data <- read.delim(url, row.names = 1, check.names = FALSE)
+dim(data)
 ```
